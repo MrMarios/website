@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lalakos's Website</title>
+</head>
+<body>
+     <button id="theme-switch">
+     <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+    </button>
+     <div class="wrapper">
+        <nav class="sidebar">
+            <a href="index.html" class="btn-h"><img src="home.png" alt="About"></a>
+            <a href="me.html" class="btn-a"><img src="me.png" alt="Εγω" ></a>
+            <a href="projects.html" class="btn-p"><img src="code.png" alt="projects"></a>
+            <a href="ewaste.html" class="btn-e"><img src="trash.png" alt="E-waste"></a>
+        </nav>
+          <main class="content">
+            <h1>Τα Projects μου</h1>
+            <p>Εχω γραψει αρκετά μικρά προγραμματακια τα τελευταία χρόνια παρολαυτα τα περισσότερα απο αυτα δεν αξίζουν καν να αναφερθούν.Ομως όσο θα περνάνε τα χρόνια εγω θα γράφω κι αλλα μπορει να τα ανεβάζω στο github αν πιστεύω ότι όντως μπορούν να εξυπηρετήσουν έστω εναν ανθρωπο πέρα απο εμενα. Θα βρεις το προφιλ μου <a href="https://github.com/mrmarios">εδω</a>.</p>
+
+<p>Στο github μου μπορεις σήμερα να δεις το <b>InstagramDoodleMaker</b> που ήταν ενα project που ένιωσα ότι μπορεί όλο και κάποιος να το χρησιμοποιήσει.Εχω υπέρ αναλύσει αυτό το project στο readme που υπάρχει αν πατήσεις το link και scrollαρεις προς τα κάτω.Μπορείς να το βρεις <a href="https://github.com/mrmarios/instagramdoodlemaker">εδω</a>.</p>
+
+<p>Ως επόμενοι στόχοι μου ειναι κάποια μικροπρογραμματακια με διαφορα Api, η δημιουργία του δικό μου git και να γραψω σε C έστω κάποια αρχή σε ενα δικό μου λειτουργικό σύστημα.Αυτοι ειναι πιο μακροπρόθεσμοι στόχοι που θα ηθελα να καταφέρω.
+</p>
+        </main>
+     </div>
+     <script>
+    const btn = document.getElementById('theme-switch');
+    btn.addEventListener('click', () => {
+       
+        document.body.classList.toggle('darkmode');
+        
+       
+        const isDark = document.body.classList.contains('darkmode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+   
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('darkmode');
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lalakos's Website</title>
+
+</head>
+<body>
+    <button id="theme-switch">
+     <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+    </button>
+       <div class="wrapper">
+        <nav class="sidebar">
+            <a href="index.html" class="btn-h"><img src="home.png" alt="About"></a>
+            <a href="me.html" class="btn-a"><img src="me.png" alt="Εγω" ></a>
+            <a href="projects.html" class="btn-p"><img src="code.png" alt="projects"></a>
+            <a href="ewaste.html" class="btn-e"><img src="trash.png" alt="E-waste"></a>
+        </nav>
+          <main class="content">
+            <h1>Ποιος είμαι?</h1>
+            <p>Με λένε Μάριο ειμαι ένας μαθητής που απλά μου αρέσουν οι υπολογιστες και ο προγραμματισμός, ειναι απίθανο το πόσα πράγματα μπορεί να κάνει ένας σύγχρονος υπολογιστής.Δεν ειχα απο μικρος υπολογιστή ειχα ενα playstation όμως, αλλα αναρωτιόμουν συχνά πως γινεται να παίζω τέτοια παιχνίδια.Οπως κάθε πιτσιρίκι μου άρεσε πολυ το minecraft είχε πλάκα αλλα είχε ακόμα περισσότερη πλάκα όταν άρχισα να το μελετω να καταλαβαινω τι γινεται "κάτω απο το καπο", τότε άρχισα να ασχολούμαι με το command line και τα command blocks εκεί καταλαβα οτι μου άρεσε ο προγραμματισμός γιατί αυτό ουσιαστικά ήταν προγραμματισμός αλλα πολυ συγκεκριμένος και εύκολος.  Αλλα όσο να 'ναι για ενα παιδι γυμνασίου εγω περνουσα ωραια γιατι μάθαινα όσο έπαιζα.Μετα απο λίγο καιρό ενα καλοκαίρι που δεν είχα τι να κάνω σκέφτηκα να ασχοληθώ με μια γλώσσα προγραμματισμού.Εμαθα λίγη python εγραψα δυο με τρία προγραμματακια και το άφησα παλι.
+                <p>Οταν όμως πήγα δευτερα λυκειου και καταλαβα οτι τα επόμενα δύο χρόνια θα κάνουμε προγραμματισμο (έστω πολυ αρχικό)ενθουσιαστηκα.Μπορει ο προγραμματισμός που κάνουμε να μην ειναι και τόσο καλός καθώς ειναι σε μια γλώσσα που ειναι φτιαγμένη για μαθησιακους σκοπούς και μαθαίνουμε τα βασικά του προγραμματισμου.Αλλα μπορει να κινητοποιήσει κάποιον να ψάξει και ίσως ακολουθήσει αυτό το τομέα.Πιστευω παρολαυτα οτι δεν τον ετοιμάζει αρκετά για την αγορά εργασίας ή το πανεπιστήμιο,οι περισσότερες σχολές πληροφορικης ασχολούνται με C ή Python πολυ νωρίς κατι που μπορεί να φανεί σε κάποιον πολυ μυστήριο αν δεν ασχοληθεί με προγραμματισμό,πέρα απο το σχολειο.</p>
+        </main>
+    </div>
+<script>
+    const btn = document.getElementById('theme-switch');
+    btn.addEventListener('click', () => {
+       
+        document.body.classList.toggle('darkmode');
+        
+       
+        const isDark = document.body.classList.contains('darkmode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+   
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('darkmode');
+    }
+    </script>
+  </body>
+  </html>
