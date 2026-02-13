@@ -19,6 +19,7 @@ body.darkmode{
   --textc-color:#f5f6fa;
   --secon-color:#00d2d3;
   --accent-color: #00d2d3;
+  
 }
 body.darkmode .sidebar img {
     filter: invert(1);
@@ -102,6 +103,10 @@ h1 {
     justify-content: center;
 }
 
+#theme-switch svg:last-child{
+    display: none;
+
+}
 .sidebar a {
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
@@ -119,6 +124,16 @@ h1 {
     --secon-color: #ffffff;
 
 }
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+display: block;
+
+}
+
+
 @media screen and (max-width: 600px) {
     .wrapper {
         flex-direction: column; 
